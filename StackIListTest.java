@@ -8,6 +8,22 @@ import org.junit.jupiter.api.Test;
 class StackIListTest {
 
 	@Test
+	void ISTACK_LIST_TEST(){
+		ISTACK<String> A = new MTSTACK<String>();
+		ISTACK<Stirng> A1 = A.push("Hans").push("there ").push("Hello ");
+		ISTACK<Stirng> A2 = A.push("Hello ").push("there ").push("Hans ");
+		ISTACK<Stirng> A3 = A.push("Hans").push("there ");
+		
+		assertEquals(A.emptyStack(), true);
+		assertEquals(A1.emptyStack(), false);
+		assertEquals(A1.top().equals("Hello "), true);
+		assertEquals(A1.pop().equals(A3), true);
+		assertEquals(A1.reverse().equals(A2), true);
+		
+		
+	}
+
+	@Test
 	void test() {
 		
 		StackIList<String> E = new StackMTLIST<String>();
