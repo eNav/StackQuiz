@@ -8,5 +8,6 @@ public interface ISTACK<X> {
 	//removes the top from the stack
 	public boolean emptyStack?();
 	//Purpose: to check if stack is empty
+	public ISTACK<X> reverse();
 }
 
