@@ -7,6 +7,10 @@ public class NMTLSTACK<X> implements ISTACK<X> {
 		car = f;
 		cdr = r;	}
 	
+	public NMTLSTACK<X> push(X v){
+		return new NMTLSTACK<X>(v,this);	}
+	
+	
 	
 
 }
