@@ -9,3 +9,4 @@ public interface ISTACK<X> {
 	public boolean emptyStack?();
 	//Purpose: to check if stack is empty
 }
+
