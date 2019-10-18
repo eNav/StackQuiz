@@ -13,14 +13,14 @@ public class NMTLSTACK<X> implements ISTACK<X> {
 	
 	public X top() throws Exception{return car;}
 	
-	public X rest() throws Exception{return cdr;}
+	public X stackrest() throws Exception{return cdr;}
 	
 	public boolean emptyStack() {return false;}
 	
-	private NMTLSTACK<X> revhelper(ISTACK<X> l, ISTACK<X>res)
+		private NMTLSTACK<X> revhelper(ISTACK<X> l, ISTACK<X>res)
 	//ACCUM INV: reverse(this) == append(reverse(l), res)
-	{try {if(l.isEmpty()) {return res;}
-	else{return (revhelper(l.rest(), res.cons(l.first())));}}
+	{try {if(l.emptyStack()) {return res;}
+	else{return (revhelper(l.stackrest(), res.push(l.top())));}}
 	catch(Exception e) {
 		System.out.println("Error StackNMTLIST append: "+ e.getMessage());
 		return this;}	}
