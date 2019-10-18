@@ -6,7 +6,7 @@ public interface ISTACK<X> {
 	//gets top of Stack
 	public ISTACK<X> pop();
 	//removes the top from the stack
-	public boolean emptyStack?();
+	public boolean emptyStack();
 	//Purpose: to check if stack is empty
 	public ISTACK<X> reverse();
 }
