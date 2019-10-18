@@ -1,4 +1,6 @@
 
-public class NMTLSTACK {
+public class NMTLSTACK<X> implements ISTACK<X> {
+	
+	
 
 }
