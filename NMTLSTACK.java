@@ -10,6 +10,8 @@ public class NMTLSTACK<X> implements ISTACK<X> {
 	public NMTLSTACK<X> push(X v){
 		return new NMTLSTACK<X>(v,this);	}
 	
+	public X top() throws Exception{return car;}
+	public X rest() throws Exception{return cdr;}
 	
 	
 
