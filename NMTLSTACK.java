@@ -2,7 +2,7 @@
 
 public class NMTLSTACK<X> implements ISTACK<X> {
 	private X car;
-	private StackIList<X> cdr;
+	private ISTACK<X> cdr;
 	
 	public NMTLSTACK(X f, ISTACK<X> r) {
 		car = f;
@@ -12,7 +12,10 @@ public class NMTLSTACK<X> implements ISTACK<X> {
 		return new NMTLSTACK<X>(v,this);	}
 	
 	public X top() throws Exception{return car;}
+	
 	public X rest() throws Exception{return cdr;}
+	
+	public boolean emptyStack() {return false;}
 	
 	private NMTLSTACK<X> revhelper(ISTACK<X> l, ISTACK<X>res)
 	//ACCUM INV: reverse(this) == append(reverse(l), res)
