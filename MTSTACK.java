@@ -1,8 +1,5 @@
 package Stack;
 
-import Stack.ISTACK;
-import Stack.NMTSTACK;
-
 public class MTSTACK<X> implements ISTACK<X> {
 	public MTSTACK() {};  
 	public ISTACK<X> pop() throws Exception{
