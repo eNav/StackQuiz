@@ -1,9 +1,5 @@
 package Stack;
 
-import Stack.ISTACK;
-import Stack.MTSTACK;
-import Stack.NMTSTACK;
-
 public class NMTSTACK<X> implements ISTACK<X> {
 	private X car;
 	private ISTACK<X> cdr;
